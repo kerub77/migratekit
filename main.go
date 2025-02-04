@@ -12,12 +12,12 @@ import (
 	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 	"github.com/thediveo/enumflag/v2"
-	"github.com/vexxhost/migratekit/cmd"
-	"github.com/vexxhost/migratekit/internal/nbdkit"
-	"github.com/vexxhost/migratekit/internal/openstack"
-	"github.com/vexxhost/migratekit/internal/target"
-	"github.com/vexxhost/migratekit/internal/vmware"
-	"github.com/vexxhost/migratekit/internal/vmware_nbdkit"
+	"github.com/kerub77/migratekit/cmd"
+	"github.com/kerub77/migratekit/internal/nbdkit"
+	"github.com/kerub77/migratekit/internal/openstack"
+	"github.com/kerub77/migratekit/internal/target"
+	"github.com/kerub77/migratekit/internal/vmware"
+	"github.com/kerub77/migratekit/internal/vmware_nbdkit"
 	"github.com/vmware/govmomi/find"
 	"github.com/vmware/govmomi/object"
 	"github.com/vmware/govmomi/session"
@@ -308,7 +308,7 @@ var cutoverCmd = &cobra.Command{
 
 		log.Info("Final migration cycle completed, spinning up new OpenStack VM")
 
-		err = clients.CreateResourcesForVirtualMachine(ctx, vm, flavorId, networks)
+		err = clients.CreateResourcesForVirtualMachine(ctx, vm, flavorId, networks, availabilityZone)
 		if err != nil {
 			return err
 		}
