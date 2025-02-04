@@ -15,7 +15,7 @@ import (
 	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/servers"
 	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/ports"
 	log "github.com/sirupsen/logrus"
-	"github.com/vexxhost/migratekit/cmd"
+	"github.com/kerub77/migratekit/cmd"
 	"github.com/vmware/govmomi/object"
 	"github.com/vmware/govmomi/vim25/mo"
 	"github.com/vmware/govmomi/vim25/types"
