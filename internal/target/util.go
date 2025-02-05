@@ -7,7 +7,7 @@ import (
 
 	"github.com/gosimple/slug"
 	log "github.com/sirupsen/logrus"
-	"github.com/vexxhost/migratekit/internal/vmware"
+	"github.com/kerub77/migratekit/internal/vmware"
 	"github.com/vmware/govmomi/object"
 	"github.com/vmware/govmomi/vim25/types"
 )
