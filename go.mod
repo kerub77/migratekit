@@ -1,4 +1,4 @@
-module github.com/vexxhost/migratekit
+module github.com/kerub77/migratekit
 
 go 1.22
 
